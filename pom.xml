@@ -84,9 +84,8 @@
 	</build>
 	<distributionManagement>
 		<repository>
-			<id>local-repository</id>
-			<name>Local Repository</name>
-			<url>C:\ProgramData\Jenkins\.jenkins\workspace\multi-java-pipeline-maven\dist</url>
+			<id>local-repo</id>
+			<url>file:///C:/ProgramData/Jenkins/.jenkins/workspace/multi-java-pipeline-maven/dist</url>
 		</repository>
 	</distributionManagement>
 </project>
