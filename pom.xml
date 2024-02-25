@@ -4,30 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>JunitTesting_581</groupId>
 	<artifactId>JunitTesting_581</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<properties>
-		<java.version.8>8</java.version.8>
-		<java.version.11>11</java.version.11>
 		<java.version.14>14</java.version.14>
 		<java.version.17>17</java.version.17>
 	</properties>
 	<!-- Profiles for Java versions -->
 	<profiles>
-		<profile>
-			<id>java8</id>
-			<properties>
-				<java.version>${java.version.8}</java.version>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<id>java11</id>
-			<properties>
-				<java.version>${java.version.11}</java.version>
-			</properties>
-		</profile>
 		<profile>
 			<id>java14</id>
 			<properties>
@@ -70,7 +53,6 @@
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
-			<!-- Compiler plugin to set source and target Java version -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
