@@ -1,0 +1,595 @@
+Started by user Rohan
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build with Multiple JDK Versions)
+[Pipeline] parallel
+[Pipeline] { (Branch: Matrix - JDK_VERSION = 'Java 14')
+[Pipeline] { (Branch: Matrix - JDK_VERSION = 'Java 17')
+[Pipeline] stage
+[Pipeline] { (Matrix - JDK_VERSION = 'Java 14')
+[Pipeline] stage
+[Pipeline] { (Matrix - JDK_VERSION = 'Java 17')
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Compile)
+[Pipeline] stage
+[Pipeline] { (Compile)
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Program Files\Git\bin\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\.git # timeout=10
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Program Files\Git\bin\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/rohansonawane/581-ci-cd.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/rohansonawane/581-ci-cd.git # timeout=10
+Fetching upstream changes from https://github.com/rohansonawane/581-ci-cd.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+Fetching upstream changes from https://github.com/rohansonawane/581-ci-cd.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > git --version # 'git version 2.43.0.windows.1'
+ > C:\Program Files\Git\bin\git.exe fetch --tags --force --progress -- https://github.com/rohansonawane/581-ci-cd.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git --version # 'git version 2.43.0.windows.1'
+ > C:\Program Files\Git\bin\git.exe fetch --tags --force --progress -- https://github.com/rohansonawane/581-ci-cd.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 44067f14f03b2834159e350b7ba49cd5a49db593 (refs/remotes/origin/main)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+Checking out Revision 44067f14f03b2834159e350b7ba49cd5a49db593 (refs/remotes/origin/main)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 44067f14f03b2834159e350b7ba49cd5a49db593 # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 44067f14f03b2834159e350b7ba49cd5a49db593 # timeout=10
+Commit message: "Update pom.xml"
+ > C:\Program Files\Git\bin\git.exe rev-list --no-walk 44067f14f03b2834159e350b7ba49cd5a49db593 # timeout=10
+Commit message: "Update pom.xml"
+[Pipeline] bat
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn compile 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn compile 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.755 s
+[INFO] Finished at: 2024-02-25T21:20:42-08:00
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.785 s
+[INFO] Finished at: 2024-02-25T21:20:42-08:00
+[INFO] ------------------------------------------------------------------------
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn test 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn test 
+[INFO] Scanning for projects...
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\test-classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ JunitTesting_581 ---
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ JunitTesting_581 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestMathUtil
+[INFO] Running TestMathUtil
+Error: Division by zero is not allowed.
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s -- in TestMathUtil
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.878 s
+[INFO] Finished at: 2024-02-25T21:20:51-08:00
+[INFO] ------------------------------------------------------------------------
+Error: Division by zero is not allowed.
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s -- in TestMathUtil
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.869 s
+[INFO] Finished at: 2024-02-25T21:20:51-08:00
+[INFO] ------------------------------------------------------------------------
+[Pipeline] junit
+Recording test results
+No test report files were found. Configuration error?
+None of the test reports contained any result
+[Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] junit
+Recording test results
+No test report files were found. Configuration error?
+None of the test reports contained any result
+[Checks API] No suitable checks publisher found.
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] stage
+[Pipeline] { (Package)
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Package)
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn package 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn package 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ JunitTesting_581 ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ JunitTesting_581 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestMathUtil
+Error: Division by zero is not allowed.
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 s -- in TestMathUtil
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ JunitTesting_581 ---
+[INFO] Running TestMathUtil
+Error: Division by zero is not allowed.
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.145 s -- in TestMathUtil
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ JunitTesting_581 ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.128 s
+[INFO] Finished at: 2024-02-25T21:21:02-08:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jar: C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\JunitTesting_581-0.0.2.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.194 s
+[INFO] Finished at: 2024-02-25T21:21:02-08:00
+[INFO] ------------------------------------------------------------------------
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] bat
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn deploy 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven>mvn deploy 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< JunitTesting_581:JunitTesting_581 >------------------
+[INFO] Building JunitTesting_581 0.0.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ JunitTesting_581 ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ JunitTesting_581 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ JunitTesting_581 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ JunitTesting_581 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestMathUtil
+Error: Division by zero is not allowed.
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 s -- in TestMathUtil
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ JunitTesting_581 ---
+[INFO] Running TestMathUtil
+Error: Division by zero is not allowed.
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s -- in TestMathUtil
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ JunitTesting_581 ---
+[INFO] Building jar: C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\JunitTesting_581-0.0.2.jar
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ JunitTesting_581 ---
+[INFO] Building jar: C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\JunitTesting_581-0.0.2.jar
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ JunitTesting_581 ---
+[INFO] Installing C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\pom.xml to C:\WINDOWS\system32\config\systemprofile\.m2\repository\JunitTesting_581\JunitTesting_581\0.0.2\JunitTesting_581-0.0.2.pom
+[INFO] Installing C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\JunitTesting_581-0.0.2.jar to C:\WINDOWS\system32\config\systemprofile\.m2\repository\JunitTesting_581\JunitTesting_581\0.0.2\JunitTesting_581-0.0.2.jar
+[INFO] 
+[INFO] --- deploy:3.1.1:deploy (default-deploy) @ JunitTesting_581 ---
+[INFO] Installing C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\pom.xml to C:\WINDOWS\system32\config\systemprofile\.m2\repository\JunitTesting_581\JunitTesting_581\0.0.2\JunitTesting_581-0.0.2.pom
+[INFO] Installing C:\ProgramData\Jenkins\.jenkins\workspace\multijava-pipeline-maven\target\JunitTesting_581-0.0.2.jar to C:\WINDOWS\system32\config\systemprofile\.m2\repository\JunitTesting_581\JunitTesting_581\0.0.2\JunitTesting_581-0.0.2.jar
+[INFO] 
+[INFO] --- deploy:3.1.1:deploy (default-deploy) @ JunitTesting_581 ---
+Uploading to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.pom
+Progress (1): 2.6 kB
+                    
+Uploaded to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.pom (2.6 kB at 139 kB/s)
+Uploading to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.jar
+Progress (1): 3.9 kB
+                    
+Uploaded to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.jar (3.9 kB at 53 kB/s)
+Downloading from local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml
+Progress (1): 312 B
+                   
+Downloaded from local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml (312 B at 4.4 kB/s)
+Uploading to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml
+Progress (1): 312 B
+                   
+Uploaded to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml (312 B at 78 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.062 s
+[INFO] Finished at: 2024-02-25T21:21:13-08:00
+[INFO] ------------------------------------------------------------------------
+Uploading to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.pom
+Progress (1): 2.6 kB
+                    
+Uploaded to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.pom (2.6 kB at 61 kB/s)
+Uploading to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.jar
+Progress (1): 3.9 kB
+                    
+Uploaded to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/0.0.2/JunitTesting_581-0.0.2.jar (3.9 kB at 134 kB/s)
+Downloading from local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml
+Progress (1): 312 B
+                   
+Downloaded from local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml (312 B at 14 kB/s)
+Uploading to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml
+Progress (1): 312 B
+                   
+Uploaded to local-repo: file:///C:/ProgramData/Jenkins/.jenkins/workspace/multijava-pipeline-maven/dist/JunitTesting_581/JunitTesting_581/maven-metadata.xml (312 B at 31 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.049 s
+[INFO] Finished at: 2024-02-25T21:21:13-08:00
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // parallel
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
