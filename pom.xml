@@ -16,7 +16,9 @@
 			<properties>
 				<java.version>${java.version.14}</java.version>
 			</properties>
-			
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 		</profile>
 		<profile>
 			<id>java17</id>
