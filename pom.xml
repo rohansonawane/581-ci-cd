@@ -16,18 +16,12 @@
 			<properties>
 				<java.version>${java.version.14}</java.version>
 			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 		</profile>
 		<profile>
 			<id>java17</id>
 			<properties>
 				<java.version>${java.version.17}</java.version>
 			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 		</profile>
 	</profiles>
 	<dependencies>
