@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>JunitTesting_581</groupId>
 	<artifactId>JunitTesting_581</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.2</version>
 	<properties>
 		<java.version.14>14</java.version.14>
 		<java.version.17>17</java.version.17>
